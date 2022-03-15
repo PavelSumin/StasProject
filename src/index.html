@@ -1,42 +1,54 @@
-<!doctype html>
+<!-- 
+    1. Хорошая пратика - разделять внутри папки src файлы по типам, к примеру верстка в папке html, скирпты в папке js, стили - в css
+    2. Важные скрипты и стили подключать в теге head
+    3. На будущее - избегать встроенных и инлайн стилей по-возможности. 
+-->
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>WebPack</title>
-    <style>
-        #test {
-            margin-left: 30px;
-        }
-        .todo_completed {
-            background-color: ghostwhite;
-        }
-        .todo {
-            background-color: ghostwhite;
-        }
-        .button {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            padding: .5em 2em;
-            outline: none;
-            border-width: 2px 0;
-            border-style: solid none;
-            border-color: #FDBE33 #000 #D77206;
-            border-radius: 6px;
-            background: linear-gradient(#F3AE0F, #E38916) #E38916;
-            transition: 0.2s;
-            margin-left: 30px;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-        .button:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
-        .button:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
 
+    <style>
+      #test {
+        margin-left: 30px;
+      }
+      .todo {
+        background-color: ghostwhite;
+      }
+      .button {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 2em;
+        outline: none;
+        border-width: 2px 0;
+        border-style: solid none;
+        border-color: #fdbe33 #000 #d77206;
+        border-radius: 6px;
+        background: linear-gradient(#f3ae0f, #e38916) #e38916;
+        transition: 0.2s;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      .button:hover {
+        background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+      }
+      .button:active {
+        background: linear-gradient(#f59500, #f5ae00) #f59500;
+      }
+
+      .hidden {
+        display: none;
+      }
     </style>
-</head>
-<body>
-<button class="button" style="background-color: fuchsia">Скрыть выполненные</button>
-<div id="test"></div>
-<script src="/dist/bundle.js"></script>
-</body>
+    <script src="../dist/bundle.js"></script>
+  </head>
+  <body>
+    <button class="button" style="background-color: fuchsia">
+      Скрыть выполненные
+    </button>
+    <div id="test"></div>
+  </body>
 </html>
